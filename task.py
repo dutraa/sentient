@@ -33,6 +33,7 @@ SYMBOL = SYMBOL.rstrip()
 os.environ['GCS_BUCKET'] = GCS_BUCKET
 os.environ['PROJECT'] = PROJECT
 os.environ['REGION'] = REGION
+DIR='/content/datalab/trainer'
 
 
 base_url = 'https://www.alphavantage.co/query?'
@@ -203,14 +204,15 @@ ti = TechIndicators(key=API_KEY, output_format='pandas')
 
 
 
-
+path_train = DIR + '/fintech_data_train.csv'
+path_test = DIR + '/fintech_data_test.csv'
 
 data_train = pd.read_csv(
-  filepath_or_buffer= u'fintech_data_train.csv',
+  filepath_or_buffer= path_train,
   names=['EMA', 'SMA', 'WMA', 'DEMA', 'TEMA', 'TRIMA', 'KAMA', 'T3', 'RSI', 'WILLR', 'ADX', 'ADXR', 'MOM',"OPEN", "HIGH", "LOW", "CLOSE", "ADJUSTED_CLOSE", "VOLUME", "DIVIDEND_AMOUNT", "SPLIT_COEFFICIENT"])
 
 data_test = pd.read_csv(
-  filepath_or_buffer= u'fintech_data_test.csv',
+  filepath_or_buffer= path_test,
   names=['EMA', 'SMA', 'WMA', 'DEMA', 'TEMA', 'TRIMA', 'KAMA', 'T3', 'RSI', 'WILLR', 'ADX', 'ADXR', 'MOM',"OPEN", "HIGH", "LOW", "CLOSE", "ADJUSTED_CLOSE", "VOLUME", "DIVIDEND_AMOUNT", "SPLIT_COEFFICIENT"])
 
 
