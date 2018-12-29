@@ -280,4 +280,4 @@ if __name__ == '__main__':
   arguments = args.__dict__
   output_dir = arguments.pop('output_dir')
 
-tf.estimator.train_and_evaluate(generate_estimator(output_dir), train_spec, eval_spec)        
+  tf.estimator.train_and_evaluate(generate_estimator(output_dir), train_spec, eval_spec)        
