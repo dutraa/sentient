@@ -1,8 +1,6 @@
 
 import pandas as pd
 import tensorflow as tf
-from alpha_vantage.techindicators import TechIndicators
-from alpha_vantage.timeseries import TimeSeries
 import requests
 import json
 import time
@@ -161,10 +159,6 @@ def create_data_for_train_test(*indicators, **request_params):
 
 
 # stockdata = StockData()
-
-
-ts = TimeSeries(key=API_KEY, output_format='pandas')
-ti = TechIndicators(key=API_KEY, output_format='pandas')
 
 # ts_data, ts_metadata = ts.get_daily(symbol=SYMBOL.rstrip(), outputsize='full')
 # ts_data = ts_data.tail(LEN)
