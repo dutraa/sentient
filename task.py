@@ -202,11 +202,11 @@ path_train = DIR + '/fintech_data_train.csv'
 path_test = DIR + '/fintech_data_test.csv'
 
 data_train = pd.read_csv(
-  filepath_or_buffer= path_train,
+  filepath_or_buffer= 'https://storage.googleapis.com/projectsentient/fintech_data_train.csv',
   names=['EMA', 'SMA', 'WMA', 'DEMA', 'TEMA', 'TRIMA', 'KAMA', 'T3', 'RSI', 'WILLR', 'ADX', 'ADXR', 'MOM',"OPEN", "HIGH", "LOW", "CLOSE", "ADJUSTED_CLOSE", "VOLUME", "DIVIDEND_AMOUNT", "SPLIT_COEFFICIENT"])
 
 data_test = pd.read_csv(
-  filepath_or_buffer= path_test,
+  filepath_or_buffer= 'https://storage.googleapis.com/projectsentient/fintech_data_test.csv',
   names=['EMA', 'SMA', 'WMA', 'DEMA', 'TEMA', 'TRIMA', 'KAMA', 'T3', 'RSI', 'WILLR', 'ADX', 'ADXR', 'MOM',"OPEN", "HIGH", "LOW", "CLOSE", "ADJUSTED_CLOSE", "VOLUME", "DIVIDEND_AMOUNT", "SPLIT_COEFFICIENT"])
 
 
